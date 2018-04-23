@@ -7,7 +7,9 @@ This project shows how to integrate a [Next.js](https://github.com/zeit/next.js)
 The project was inspired by [feathers-next-example](https://github.com/Albert-Gao/feathers-next-example)
 and by [this](https://github.com/hugotox/next.js/tree/canary/examples/with-cookie-auth-redux) example for the authentication part.
 
-Contrary to [feathers-next-example](https://github.com/Albert-Gao/feathers-next-example), I decided to keep the Feathers backend (the API) separated from the "server" (SSR) part of the Next.js frontend. This means that we're running two separate server (node.js) processes. This might add a (tiny) bit of overhead, but ultimately it makes the app easier to develop and maintain (and configure) because we don't mingle Feathers API backend code with Next.js server rendering code.
+Contrary to [feathers-next-example](https://github.com/Albert-Gao/feathers-next-example), I decided to keep the Feathers backend (the API) separated from the "server" (SSR) part of the Next.js frontend. This means that we're running two separate server (node.js) processes.
+
+This might add a (tiny) bit of overhead, but ultimately it makes the app easier to develop and maintain (and configure) because we don't mingle Feathers API backend code with Next.js server rendering code.
 
 ## Getting Started
 
@@ -17,13 +19,14 @@ To install the app (backend and frontend), open a terminal and issue the followi
 
 ```
 # Clone the repo: 
- git clone https://github.com/leob/feathers-next
+git clone https://github.com/leob/feathers-next
 # Install and run the server part:
 cd server
 npm install
 npm run start
-// Then in another terminal, install and run the client part:
-cd ../client
+# Then in another terminal, install and run the client part:
+cd ..
+cd client
 npm install
 npm run dev
 ```
@@ -32,8 +35,8 @@ You should see the home page containing Login and Register links.
 
 ## Using the app
 
-The home page of the app contains Login and Register links. Click on "Register", enter a user name and password of your choosing (choose anything you want, there are no restrictions yet) and click "Submit". You are now registered, and logged in.
+The home page of the app contains "Login" and "Register" links. Click on "Register", enter a user name and password of your choosing (choose anything you want, there are no restrictions) and click "Submit". You are now registered, and logged in.
 
-Click on the other pages (```private``` and ```private-perm-required```) to see if they work. The ```private``` page demonstrates how to call a Feathers service which requires authentication (in the Feathers backend we've implemented a simple "counters" service which always returns the same set of data).
+Click on the other links (```private``` and ```private-perm-required```) to see if they work. The ```private``` page demonstrates how to call a Feathers service which requires authentication (in the Feathers backend we've implemented a simple "counters" service which always returns the same set of data).
 
 To access the ```private-perm-required``` page, you need an "admin" user. Click ```Logout``` on the home page and then click ```Register```, and register a new user with the user name "admin". You should now be able to access the ```private-perm-required``` page.
