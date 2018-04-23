@@ -11,7 +11,7 @@ export default ({username, password, errorMessage, onChange, onSubmit}) => {
         <input type='password' name='password' onChange={onChange} />
       </div>
       <div>
-        <button>Login</button>
+        <button>Submit</button>
       </div>
       <small style={{color: 'red'}}>{errorMessage}</small>
     </form>
