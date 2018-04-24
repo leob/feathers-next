@@ -29,7 +29,7 @@ cd ..
 cd client
 npm install
 npm run dev
-# The command above (```npm run dev```) supports hot reload, and is perfect for developing.
+# The command above ("npm run dev") supports hot reload, and is perfect for developing.
 # For production however, be sure to do a "build" and "run" as follows:
 npm run build
 npm run run
