@@ -42,7 +42,7 @@ You should see the home page containing Login and Register links.
 
 ## Installing `nodemon`
 
-When installing the project, right after the first step ("Cloning the repo"), you should make that `nodemon` is available, because this is needed for the app to run. You can do this in two ways: install `nodemon` globally, or locally.
+When installing the project, right after the first step ("Cloning the repo"), you should make sure that `nodemon` is available, because this is needed for the app to run. You can do this in two ways: install `nodemon` globally, or install it locally.
 
 If you want to install `nodemon` globally (so that it's available for all your node projects), then execute this command:
 
