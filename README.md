@@ -20,6 +20,8 @@ To install the app (backend and frontend), open a terminal and issue the followi
 ```
 # Clone the repo: 
 git clone https://github.com/leob/feathers-next
+# Now make sure that "nodemon" is installed, either as a global dependency, or as a local one -
+# for details see the section 'Installing nodemon'
 # Install and run the server part:
 cd server
 npm install
@@ -37,6 +39,24 @@ npm run run
 ```
 To view the app, open your browser and go to `http://localhost:3000`.
 You should see the home page containing Login and Register links.
+
+## Installing `nodemon`
+
+When installing the project, right after the first step ("Cloning the repo"), you should make that `nodemon` is available, because this is needed for the app to run. You can do this in two ways: install `nodemon` globally, or locally.
+
+If you want to install `nodemon` globally (so that it's available for all your node projects), then execute this command:
+
+```
+npm install nodemon -g
+```
+
+Alternatively, if you want to install it locally, add it as a dev dependency in `package.json` by executing:
+
+```
+npm install nodemon --save-dev
+```
+
+Both methods work, so this is a matter of preference (some people dislike global dependencies).
 
 ## Using the app
 
