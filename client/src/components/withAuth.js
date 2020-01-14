@@ -69,7 +69,7 @@ export default (permission = null) => ChildComponent => class withAuth extends C
     if (isServer) {
       // Authenticate, happens on page first load
 
-      const jwtFromCookie = getServerCookie(req, FEATHERS_COOKIE)      
+      const jwtFromCookie = getServerCookie(req, FEATHERS_COOKIE)
       const result = await store.dispatch(authenticate(jwtFromCookie))
 
       const newJwt = result.auth.jwt
@@ -80,18 +80,13 @@ export default (permission = null) => ChildComponent => class withAuth extends C
         clearServerCookie(res, FEATHERS_COOKIE)
       }
 
-    // client side - check if the Feathers API client is already authenticated  
-    } else {
+    // client side - check if the Feathers API client is already authenticated
+    } else if (!apiClient.authenticated) {
+      console.log('Need to authenticate client-side')
 
-      if (!apiClient.authenticated) {
-        console.log('Need to authenticate client-side')
-
-        // get the JWT (from cookie - set by previous login or server-side authentication) and use it to auth the API client
-        const jwt = store.getState().auth.jwt
-        await store.dispatch(authenticate(jwt, true))
-
-        apiClient.authenticated = true
-      }
+      // get the JWT (from cookie - set by previous login or server-side authentication) and use it to auth the API client
+      const jwt = store.getState().auth.jwt
+      await store.dispatch(authenticate(jwt))
     }
 
     return this.getInitProps(context, store.getState().auth.user, isPublicPage)

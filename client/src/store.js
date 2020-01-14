@@ -43,7 +43,7 @@ export function login (payload) {
   return (dispatch) => {
     return auth.login(payload.username, payload.password)
     .then(_ => {
-      return auth.authenticate()
+      return auth.authenticate(null, true)
     })
     .then(({user, jwt}) => {
       const result = dispatch({

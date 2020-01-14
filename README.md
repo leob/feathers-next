@@ -32,7 +32,7 @@ npm run dev
 # The command above ("npm run dev") supports hot reload, and is perfect for developing.
 # For production however, be sure to do a "build" and "run" as follows:
 npm run build
-npm run run
+npm run start
 # Click through the app both in 'development' and 'production' mode, and notice how the app is MUCH faster in production mode!
 ```
 To view the app, open your browser and go to `http://localhost:3000`.
