@@ -15,7 +15,7 @@
     "@feathersjs/socketio-client": "^1.0.2",
     "cookie": "^0.3.1",
     "express": "^4.15.2",
-    "next": "^5.0.0",
+    "next": "^9.3.2",
     "next-redux-wrapper": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
