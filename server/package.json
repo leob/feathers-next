@@ -49,7 +49,7 @@
   "devDependencies": {
     "eslint": "^4.6.1",
     "mocha": "^10.1.0",
-    "request": "^2.81.0",
+    "request": "^2.88.2",
     "request-promise": "^4.2.1"
   }
 }
