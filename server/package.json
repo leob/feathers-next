@@ -25,8 +25,8 @@
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
-    "@feathersjs/authentication": "^4.5.15",
-    "@feathersjs/authentication-jwt": "^1.0.2",
+    "@feathersjs/authentication": "^4.5.16",
+    "@feathersjs/authentication-jwt": "^2.0.10",
     "@feathersjs/authentication-local": "^1.0.4",
     "@feathersjs/authentication-oauth2": "^1.0.3",
     "@feathersjs/configuration": "^4.5.15",
