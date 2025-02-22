@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "eslint": "^8.28.0",
-    "mocha": "^10.1.0",
+    "mocha": "^10.8.2",
     "request": "^2.88.2",
     "request-promise": "^4.2.1"
   }
